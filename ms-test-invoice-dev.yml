@@ -5,8 +5,8 @@ spring:
   application:
     name: ms-invoice
   datasource:
-    #url: jdbc:postgresql://localhost:5432/db_invoice
-    url: jdbc:postgresql://bd-postgres12:5432/db_invoice
+    url: jdbc:postgresql://localhost:5432/db_invoice
+    #url: jdbc:postgresql://bd-postgres12:5432/db_invoice
     username: postgres
     password: 123456
     driver-class-name: org.postgresql.Driver
@@ -16,8 +16,8 @@ spring:
       ddl-auto: create
   kafka:
     consumer:
-      #bootstrap-servers: localhost:9092
-      bootstrap-servers: servicekafka:9092
+      bootstrap-servers: localhost:9092
+      #bootstrap-servers: servicekafka:9092
       key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       group-id: operation-events-invoice
